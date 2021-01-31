@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Transport Support</string>
+    <string name="title_activity_maps">Transport Support</string>
+    <string name="topic_1">Blindspot</string>
+    <string name="topic_2">Bottleneck</string>
+    <string name="topic_3">Custom topic</string>
+    <string name="avm">Auto View Mode</string>
+    <string name="av">Auto View</string>
+    <string name="marker">Marker</string>
+    <string name="heatmap">HeatMap</string>
+    <string name="bottleneck_view_choice">Bottleneck View Choice</string>
+    <string name="x">X</string>
+    <string name="default_topics_choice">Subscription Topics</string>
+    <string name="blind_spots">Blind Spots</string>
+    <string name="supply_load">Supply Load</string>
+    <string name="bottlenecks1">Bottlenecks1</string>
+    <string name="request_load">Request Load</string>
+    <string name="bottlenecks2">Bottlenecks2</string>
+    <string name="custom_topic">Custom Topic</string>
+    <string name="customTopic">customTopic</string>
+    <string name="save">Save and Subscribe</string>
+    <string name="broker_choice">Broker Choice</string>
+    <string name="edit_broker_path">Edit Broker Path</string>
+    <string name="broker_path">Broker Path</string>
+    <string name="topic">Topic</string>
+    <string name="connection_choice">Connection choice</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="save_and_connect">Save and Connect</string>
+    <string name="clear_data">Clear Data</string>
+    <string name="data_option">Data Option</string>
+    <string name="clear">Clear</string>
+
+</resources>

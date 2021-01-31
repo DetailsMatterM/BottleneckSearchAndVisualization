@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E8ADAA"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MapsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/Hdivider"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/Vdivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="#F62217"
+            android:onClick="dismissView"
+            android:text="@string/x"
+            android:textAlignment="center"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/toggleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/avm"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/toggleTxt"
+            android:layout_toRightOf="@+id/toggleTxt"
+            android:checked="true"
+            android:onClick="toggleAutoView"
+            android:text="@string/avm" />
+
+
+        <TextView
+            android:id="@+id/topics"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/toggleButton"
+            android:layout_marginTop="5dp"
+            android:text="@string/bottleneck_view_choice"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <RadioGroup
+            android:id="@+id/topicRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topics"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/markerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="changeBNeckView"
+                android:text="@string/marker" />
+
+            <RadioButton
+                android:id="@+id/heatMapButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="changeBNeckView"
+                android:text="@string/heatmap" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/topics2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/topicRadio"
+            android:layout_marginTop="10dp"
+            android:text="@string/default_topics_choice"
+            android:textSize="15sp"
+            android:textStyle="italic"/>
+
+
+        <TextView
+            android:id="@+id/blindSpots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/blind_spots"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFF00"
+            android:layout_below="@+id/topics2" />
+
+        <ToggleButton
+            android:id="@+id/blindSpotsBtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/toggleTxt"
+            android:layout_toRightOf="@+id/toggleTxt"
+            android:checked="true"
+            android:onClick="selectBlindSpot"
+            android:text="@string/blind_spots"
+            android:layout_below="@+id/topics2" />
+
+        <Button
+            android:id="@+id/clearSpotBtn"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/topics2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/blindSpotsBtn"
+            android:layout_toRightOf="@+id/blindSpotsBtn"
+            android:background="#CD7F32"
+            android:textAllCaps="false"
+            android:onClick="clearSpots"
+            android:text="@string/clear"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/bottlenecks1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/supply_load"
+            android:textAllCaps="false"
+            android:textColor="#00FF00"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/blindSpotsBtn"/>
+
+        <ToggleButton
+            android:id="@+id/supplyLoadBtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/toggleTxt"
+            android:layout_toRightOf="@+id/toggleTxt"
+            android:checked="true"
+            android:onClick="selectSupplyLoad"
+            android:text="@string/bottlenecks1"
+            android:layout_below="@+id/blindSpotsBtn" />
+
+        <Button
+            android:id="@+id/clearBneck1Btn"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/blindSpotsBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/blindSpotsBtn"
+            android:layout_toRightOf="@+id/blindSpotsBtn"
+            android:background="#CD7F32"
+            android:textAllCaps="false"
+            android:onClick="clearBtneck1"
+            android:text="@string/clear"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/bottlenecks2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/request_load"
+            android:textAllCaps="false"
+            android:textColor="#760076"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/supplyLoadBtn"/>
+
+        <ToggleButton
+            android:id="@+id/requestLoadBtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/toggleTxt"
+            android:layout_toRightOf="@+id/toggleTxt"
+            android:checked="true"
+            android:onClick="selectRequestLoad"
+            android:text="@string/bottlenecks2"
+            android:layout_below="@+id/supplyLoadBtn" />
+
+        <Button
+            android:id="@+id/clearBneck2Btn"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/supplyLoadBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/blindSpotsBtn"
+            android:layout_toRightOf="@+id/blindSpotsBtn"
+            android:background="#CD7F32"
+            android:textAllCaps="false"
+            android:onClick="clearBtneck2"
+            android:text="@string/clear"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/customView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/custom_topic"
+            android:textAllCaps="false"
+            android:textColor="#0000EB"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/requestLoadBtn"/>
+
+        <ToggleButton
+            android:id="@+id/customTopicBtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/toggleTxt"
+            android:layout_toRightOf="@+id/toggleTxt"
+            android:checked="false"
+            android:onClick="selectCustomTopic"
+            android:text="@string/customTopic"
+            android:layout_below="@+id/requestLoadBtn"/>
+
+        <Button
+            android:id="@+id/clearCustomBtn"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/requestLoadBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/blindSpotsBtn"
+            android:layout_toRightOf="@+id/blindSpotsBtn"
+            android:background="#CD7F32"
+            android:textAllCaps="false"
+            android:onClick="clearCustom"
+            android:text="@string/clear"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/topics3"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/customTopicBtn"
+            android:layout_marginTop="5dp"
+            android:text="@string/broker_choice"
+            android:textSize="15sp"
+            android:textStyle="italic"/>
+
+        <Button
+            android:id="@+id/editBroker"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/topics3"
+            android:layout_marginLeft="45dp"
+            android:background="#B7E2F0"
+            android:layout_marginStart="45dp"
+            android:onClick="openBrokerEdit"
+            android:text="@string/edit_broker_path"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/topics4"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/editBroker"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/connection_choice"
+            android:textSize="15sp"
+            android:textStyle="italic"/>
+
+        <Button
+            android:id="@+id/connBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/Hdivider"
+            android:layout_toStartOf="@+id/Hdivider"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#008000"
+            android:gravity="center_vertical"
+            android:onClick="connectToBroker"
+            android:text="@string/connect"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_below="@+id/topics4"/>
+
+        <Button
+            android:id="@+id/discBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Hdivider"
+            android:layout_toEndOf="@+id/Hdivider"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#A52A2A"
+            android:gravity="center_vertical"
+            android:onClick="disconnectFromBroker"
+            android:text="@string/disconnect"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_below="@+id/topics4"/>
+
+        <TextView
+            android:id="@+id/topics5"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/discBtn"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/data_option"
+            android:textSize="15sp"
+            android:textStyle="italic"/>
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#483C32"
+            android:gravity="center_vertical"
+            android:onClick="clearSavedData"
+            android:text="@string/clear_data"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textAllCaps="false"
+            android:layout_below="@+id/topics5"/>
+
+        <Button
+            android:id="@+id/closeBtn2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/clearBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="#F62217"
+            android:onClick="dismissView"
+            android:text="@string/x"
+            android:textAlignment="center"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</ScrollView>

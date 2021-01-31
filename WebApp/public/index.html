@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Visualizer</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://unpkg.com/mqtt@3.0.0/dist/mqtt.min.js"></script>
+    <script src="/map.js"></script>
+    <script src="/Api.js"></script>
+
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .buttons {
+        position: absolute;
+        top: 20px;
+        background: #fff;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
+
+      .buttons > input {
+        font-size: inherit;
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .buttons .change-container {
+        margin-top: 10px;
+      }
+
+      .buttons .change-container > input {
+        font-size: 16px;
+        outline: none;
+        padding: 5px;
+        border: 2px solid rgb(212, 212, 212);
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      button {
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 5px;
+        outline: none;
+      }
+
+      #clear-data {
+        background-color: #fc8181;
+      }
+
+      button:active {
+        background-color: #3b87fd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <div class="buttons">
+      <input id="blind-spots" type="checkbox" checked /> Blind Spots<br />
+      <input id="bottle-necks" type="checkbox" checked /> Bottle Necks<br />
+      <input id="blind-spots-and-bottle-necks" type="checkbox" checked />
+      Request Load<br />
+
+      <div class=" change-container">
+        <input
+          id="subscription_topic"
+          type="text"
+          placeholder="subscription topic"
+        />
+        <button id="change_subscription_topic">Change Topic</button>
+      </div>
+
+      <div class="change-container">
+        <input id="broker_address" type="text" placeholder="broker address" />
+        <button id="change_broker_url">Change URL</button>
+      </div>
+
+      <button id="clear-data">Clear Data</button>
+    </div>
+  </body>
+</html>

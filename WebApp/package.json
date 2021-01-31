@@ -1,0 +1,51 @@
+{
+  "name": "map",
+  "version": "0.1.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "dev": "NODE_ENV=development nodemon app.js",
+    "build": "NODE_ENV=production parcel build ./public/index.html",
+    "serve": "serve ./dist",
+    "lint": "eslint . --ignore-path .gitignore",
+    "lint:check": "eslint --print-config \"./src/**/*.js\" | eslint-config-prettier-check",
+    "format": "prettier --write \"**/*.+(js|md|html|json)\" --ignore-path .gitignore",
+    "test": "echo test"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "mapbox-gl": "^1.5.0",
+    "morgan": "^1.9.1",
+    "mqtt": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "nodemon": "^2.0.2",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "serve": "^11.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint"
+    ],
+    "*.{js,json,md,html}": [
+      "yarn format",
+      "git add"
+    ]
+  }
+}
