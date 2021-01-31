@@ -6,6 +6,8 @@ Utilizing the Pipe and Filter architecture pattern, data is manipulated and then
 Those subscribe to a set of topics and visualize the data they receive accordingly. 
 More extensive documentation can be found in the [Documentation](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/tree/main/Documentation) section. <br> 
 
+This project was devevloped on Gitlab and then transfered to Github
+
 # The project consists of
 * [Publisher](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/tree/main/Publisher) <br>
 * [Subscriber](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/tree/main/Subscriber) <br>
