@@ -4,7 +4,7 @@ It is intended to analyse the public transportation in the greater Gothenburg ar
 To do so, it utilizes a Västtrafik api, furthermore it contains a Generator that can be used to simulate certain amounts of traffic within the city.
 Utilizing the Pipe and Filter architecture pattern, data is manipulated and then broadcasted over Mqtt to subscribers, namely an Android App, as well as a Web App. 
 Those subscribe to a set of topics and visualize the data they receive accordingly. 
-More extensive documentation can be found in the [Documentation](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/tree/main/Documentation) section. <br> 
+Extensive documentation regarding the architecturecan be found in the [Documentation](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/tree/main/Documentation) section. <br> 
 
 This project was devevloped on Gitlab and then transfered to Github
 
