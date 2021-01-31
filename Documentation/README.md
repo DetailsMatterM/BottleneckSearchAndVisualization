@@ -10,7 +10,7 @@ This repository contains documentation of software that helps in finding blindsp
 * [Trafic data]
 * [Java, JavaScript]
 
-## Documentations included so far
+## Documentations included
 
 
 [1. Use Case Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation#1-use-case-diagram) <br>
