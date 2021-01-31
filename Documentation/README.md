@@ -13,19 +13,19 @@ This repository contains documentation of software that helps in finding blindsp
 ## Documentations included
 
 
-[1. Use Case Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation#1-use-case-diagram) <br>
+[1. Use Case Diagram](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/Use%20Case%20Diagram.png) <br>
 2. Class Diagram <br>
-&emsp; 2.1 [Android Class Diagram  ](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation#21-android-class-diagram)(ClassDiagram_Android.png) <br>
-&emsp; 2.2 [Generator Class Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation/blob/master/README.md#22-generator-class-diagram)  (ClassDiagram_Generator.png) <br>
-&emsp; 2.3 [Creator Class Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation/blob/master/README.md#23-creator-class-diagram) (ClassDiagram_Creator.png) <br>
-&emsp; 2.4 [WebApp Class Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation/blob/master/README.md#24-webapp-class-diagram) (ClassDiagram_WebApp.png) <br>
-&emsp; 2.5 [Layered Class Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation/blob/master/README.md#25-layered-class-diagram)(N-tier Layered Class Diagram.png) <br>
+&emsp; 2.1 [Android Class Diagram  ](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/ClassDiagram_Android.png)(ClassDiagram_Android.png) <br>
+&emsp; 2.2 [Generator Class Diagram](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/ClassDiagram_Generator.png)  (ClassDiagram_Generator.png) <br>
+&emsp; 2.3 [Creator Class Diagram](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/ClassDiagram_Creator.png) (ClassDiagram_Creator.png) <br>
+&emsp; 2.4 [WebApp Class Diagram](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/ClassDiagram_WebApp.png) (ClassDiagram_WebApp.png) <br>
+&emsp; 2.5 [Layered Class Diagram](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/N-tier%20Layered%20Class%20Diagram.png)(N-tier Layered Class Diagram.png) <br>
 3. Component Diagram <br>
-&emsp; 3.1 [Implementational Component Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation/blob/master/README.md#31-implementational-component-diagram) <br>
+&emsp; 3.1 [Implementational Component Diagram](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/tree/main/Documentation#31-implementational-component-diagram-) <br>
 4. Sequence Diagram <br>
-&emsp; 4.1 [Pipe - filter](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation/blob/master/README.md#41-sequence-diagram-pipe-filter) <br>
-&emsp; 4.2 [Publish - subscribe](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation#42-sequence-diagram-publisher-subscriber) <br>
-5. [Deployment Diagram](https://git.chalmers.se/courses/dit355/2019/group-3/dit355-group03-documentation/blob/master/README.md#5-deployment-diagram) <br>
+&emsp; 4.1 [Pipe - filter](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/SequenceDiagram%20-%20Pipe-Filter.png) <br>
+&emsp; 4.2 [Publish - subscribe](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/SequenceDiagram%20-%20Publish-Subscribe.png) <br>
+5. [Deployment Diagram](https://github.com/DetailsMatterM/BottleneckSearchAndVisualization/blob/main/Documentation/DeploymentDiagram.png) <br>
 6. Description of diagrams in link https://docs.google.com/document/d/13-js5eSS014D49NSvfx9Oh9xObibeI5s_VgdBMAKGi8/edit# <br>
 
  
